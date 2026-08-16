@@ -11,5 +11,4 @@ Welcome to my personal developer portfolio! This repository contains the source 
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 - **Icons & Styling:** Custom CSS, Google Fonts
 
-## 🔗 Live Demo
-Check out the live website here: [Manasvi's Portfolio](https://manasvidalvii.github.io/portfolio/)
+Check out the live website here: (https://manasvidalvii.github.io/portfolio/)
