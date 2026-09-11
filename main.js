@@ -514,15 +514,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-/* =========================================================
-   CERTIFICATE IMAGE PREVIEW & INTERACTION
-========================================================= */
+    /* =========================================================
+       12. CERTIFICATE IMAGE PREVIEW & INTERACTION
+    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Select all certificate images
-    const certificateImages = document.querySelectorAll(".certificate-image");
+    const certificateImages = document.querySelectorAll(".certificate-image, .cert-card img");
 
-    // Add click event listener to open image in a new browser tab
     certificateImages.forEach(image => {
         image.addEventListener("click", () => {
             if (image.src) {
@@ -530,4 +527,5 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
 });
