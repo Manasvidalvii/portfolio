@@ -3,13 +3,17 @@
     --card-bg: rgba(13, 20, 32, 0.7);
     --card-border: rgba(255, 255, 255, 0.07);
     --card-border-hover: rgba(56, 189, 248, 0.3);
+
     --primary-green: #10B981;
     --primary-green-glow: rgba(16, 185, 129, 0.2);
+
     --accent-blue: #38BDF8;
     --accent-purple: #818CF8;
+
     --text-primary: #F8FAFC;
     --text-muted: #94A3B8;
     --text-dark: #64748B;
+
     --font-sans: 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'Fira Code', monospace;
 }
@@ -68,6 +72,9 @@ body {
     z-index: -1;
 }
 
+
+/* ================= NAVBAR ================= */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -114,6 +121,9 @@ body {
 .nav-link:hover {
     color: var(--primary-green);
 }
+
+
+/* ================= BUTTONS ================= */
 
 .btn {
     display: inline-flex;
@@ -167,6 +177,22 @@ body {
     box-shadow: 0 8px 25px rgba(56, 189, 248, 0.35);
 }
 
+.btn-primary-edugenie {
+    background: linear-gradient(
+        135deg,
+        #6366F1,
+        #2563EB
+    );
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+}
+
+.btn-primary-edugenie:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
+}
+
 .btn-secondary {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
@@ -187,6 +213,9 @@ body {
     border-color: var(--accent-blue);
     color: var(--accent-blue);
 }
+
+
+/* ================= GENERAL ================= */
 
 .main-content {
     max-width: 1200px;
@@ -221,6 +250,9 @@ body {
     font-size: 1.05rem;
     margin-bottom: 3rem;
 }
+
+
+/* ================= HERO ================= */
 
 .hero {
     display: flex;
@@ -306,6 +338,9 @@ body {
     width: 420px;
 }
 
+
+/* ================= TERMINAL ================= */
+
 .terminal-card {
     background: #0B111E;
     border: 1px solid var(--card-border);
@@ -368,6 +403,9 @@ body {
     border-radius: 12px;
 }
 
+
+/* ================= ABOUT ================= */
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -412,6 +450,9 @@ body {
     color: var(--text-dark);
     margin-top: 0.3rem;
 }
+
+
+/* ================= TIMELINE ================= */
 
 .timeline-container {
     display: grid;
@@ -465,6 +506,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -509,6 +551,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-muted);
     border: 1px solid var(--card-border);
+    white-space: nowrap;
 }
 
 .pill-grey {
@@ -530,6 +573,9 @@ body {
     color: var(--accent-blue) !important;
     border-color: rgba(56, 189, 248, 0.3) !important;
 }
+
+
+/* ================= SKILLS ================= */
 
 .skills-grid {
     display: grid;
@@ -575,6 +621,9 @@ body {
     color: var(--text-muted);
 }
 
+
+/* ================= SERVICES ================= */
+
 .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -616,6 +665,9 @@ body {
     margin-top: auto;
 }
 
+
+/* ================= PROJECT FILTERS ================= */
+
 .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -642,6 +694,9 @@ body {
     border-color: var(--primary-green);
 }
 
+
+/* ================= PROJECT CARDS ================= */
+
 .project-featured-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -650,6 +705,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 2.5rem;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-featured-card:hover {
+    border-color: rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
 }
 
 .project-featured-card + .project-featured-card {
@@ -681,6 +744,9 @@ body {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
 }
+
+
+/* ================= FOCUSSPACE ================= */
 
 .timer-display {
     font-family: var(--font-mono);
@@ -718,6 +784,9 @@ body {
     color: var(--primary-green);
     border-color: var(--primary-green);
 }
+
+
+/* ================= PROJECT INFORMATION ================= */
 
 .title-row {
     display: flex;
@@ -767,7 +836,9 @@ body {
     flex-wrap: wrap;
 }
 
-/* Image Gallery Pro Mini Preview */
+
+/* ================= IMAGE GALLERY ================= */
+
 .gallery-preview {
     padding: 1.5rem;
 }
@@ -816,7 +887,9 @@ body {
     overflow: hidden;
     cursor: pointer;
     border: 1px solid var(--card-border);
-    transition: transform 0.35s ease, border-color 0.3s ease;
+    transition:
+        transform 0.35s ease,
+        border-color 0.3s ease;
 }
 
 .mini-gallery-item img {
@@ -866,7 +939,9 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: transform 0.25s ease, background 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
 }
 
 .mini-overlay i:hover {
@@ -879,7 +954,249 @@ body {
 }
 
 
-/* Contact Section */
+/* =========================================================
+   EDUGENIE PROJECT
+========================================================= */
+
+.edugenie-card {
+    border-color: rgba(99, 102, 241, 0.18);
+}
+
+.edugenie-card:hover {
+    border-color: rgba(99, 102, 241, 0.45);
+}
+
+
+/* EduGenie preview */
+
+.edugenie-preview {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(99, 102, 241, 0.12),
+            transparent 60%
+        ),
+        #0B111E;
+
+    padding: 1.5rem;
+}
+
+.edugenie-mini {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 14px;
+    padding: 1.2rem;
+    color: #0f172a;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.edugenie-mini-header {
+    margin-bottom: 1rem;
+}
+
+.mini-ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border: 1px solid #c7d2fe;
+    border-radius: 20px;
+    padding: 4px 9px;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+}
+
+.edugenie-mini-header h4 {
+    margin-top: 0.6rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1e1b4b;
+}
+
+.edugenie-mini-header p {
+    color: #64748b;
+    font-size: 0.72rem;
+    margin-top: 2px;
+}
+
+
+/* EduGenie input */
+
+.edugenie-input-area {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 0.7rem;
+}
+
+.edugenie-input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.edugenie-input-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 0.75rem;
+}
+
+.edugenie-input-wrapper input {
+    width: 100%;
+    padding: 9px 9px 9px 29px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: #0f172a;
+    background: #ffffff;
+}
+
+.edugenie-input-wrapper input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* EduGenie Generate Button */
+
+.edugenie-generate-btn {
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #2563eb
+    );
+
+    border: none;
+    color: white;
+    border-radius: 7px;
+    padding: 0 10px;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s ease;
+}
+
+.edugenie-generate-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* EduGenie Suggestions */
+
+.edugenie-suggestions {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+}
+
+.edugenie-suggestion-label {
+    color: #64748b;
+    font-size: 0.62rem;
+    display: flex;
+    align-items: center;
+}
+
+.edugenie-chip {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    border-radius: 6px;
+    padding: 4px 7px;
+    font-size: 0.62rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edugenie-chip:hover {
+    background: #eef2ff;
+    color: #4f46e5;
+    border-color: #a5b4fc;
+}
+
+
+/* EduGenie Output */
+
+.edugenie-output {
+    min-height: 115px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.edugenie-placeholder {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.67rem;
+    gap: 6px;
+}
+
+.edugenie-placeholder i {
+    font-size: 1.5rem;
+    color: #c7d2fe;
+}
+
+
+/* EduGenie Generated Cards */
+
+.mini-result-card {
+    background: white;
+    border-left: 3px solid #6366f1;
+    border-radius: 5px;
+    padding: 7px 9px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.mini-result-card:last-child {
+    margin-bottom: 0;
+}
+
+.mini-result-title {
+    color: #312e81;
+    font-size: 0.61rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.mini-result-text {
+    color: #475569;
+    font-size: 0.62rem;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+
+/* EduGenie Badge */
+
+.edugenie-badge {
+    background: rgba(99, 102, 241, 0.15);
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.edugenie-subtitle {
+    color: #818cf8;
+}
+
+
+/* ================= CONTACT ================= */
 
 .contact-box {
     background: var(--card-bg);
@@ -918,7 +1235,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Changed from 3 columns to 4 columns for LeetCode */
 .contact-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -933,7 +1249,9 @@ body {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s, border-color 0.3s;
+    transition:
+        transform 0.3s,
+        border-color 0.3s;
 }
 
 .contact-card:hover {
@@ -960,7 +1278,7 @@ body {
 }
 
 
-/* Responsive Design */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
 
@@ -998,5 +1316,321 @@ body {
 
     .project-featured-card.reverse-layout .gallery-preview {
         order: 1;
+    }
+
+    .edugenie-card .featured-preview {
+        order: 1;
+    }
+
+    .edugenie-card .featured-info {
+        order: 2;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .main-content {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding-top: 4rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .card-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .project-featured-card {
+        padding: 1.2rem;
+    }
+
+    .featured-preview {
+        padding: 1rem;
+    }
+
+    .contact-box {
+        padding: 2rem 1.3rem;
+    }
+
+    .contact-heading {
+        font-size: 2.1rem;
+    }
+
+    .edugenie-input-area {
+        flex-direction: column;
+    }
+
+    .edugenie-generate-btn {
+        padding: 9px;
+        justify-content: center;
+    }
+
+    .mini-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .button-row .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* EduGenie mobile improvements */
+    .edugenie-mini {
+        padding: 1rem;
+    }
+
+    .edugenie-mini-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .edugenie-suggestions {
+        align-items: flex-start;
+    }
+
+    .edugenie-suggestion-label {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+}
+
+
+/* =========================================================
+ /* =========================================================
+   CERTIFICATES SECTION
+========================================================= */
+
+.certificates-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.project-featured-card.certificate-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background: var(--card-bg, #111827);
+    border: 1px solid var(--card-border, #1f2937);
+    border-radius: 16px;
+    padding: 1.8rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-featured-card.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-green, #10b981);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.12);
+}
+
+/* Certificate Preview & Image Styling */
+.featured-preview {
+    width: 100%;
+}
+
+.preview-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0B111E;
+    border: 1px solid var(--card-border, #1f2937);
+    padding: 0.8rem;
+}
+
+.code-comment {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    color: var(--text-muted, #9ca3af);
+    margin-bottom: 0.6rem;
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image {
+    transform: scale(1.02);
+}
+
+/* Content & Typography */
+.featured-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.title-row h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--primary-green, #10b981);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.subtitle-blue {
+    color: #3b82f6;
+}
+
+.description {
+    color: var(--text-muted, #9ca3af);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.bullet-list li {
+    color: var(--text-muted, #9ca3af);
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Badges & Pills */
+.flagship-badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--primary-green, #10b981);
+    border: 1px solid var(--primary-green, #10b981);
+    white-space: nowrap;
+}
+
+.flagship-badge.pill-blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.pills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.margin-v {
+    margin: 0.8rem 0 1.2rem;
+}
+
+.tag-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border, #1f2937);
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* Action Buttons */
+.button-row {
+    margin-top: auto;
+}
+
+.btn-primary-green {
+    background: var(--primary-green, #10b981);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-primary-green:hover {
+    background: #059669;
+}
+
+.btn-primary-blue {
+    background: #3b82f6;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-primary-blue:hover {
+    background: #2563eb;
+}
+
+/* =========================================================
+   CERTIFICATES RESPONSIVE STYLES
+========================================================= */
+
+@media (max-width: 868px) {
+    .project-featured-card.certificate-card,
+    .project-featured-card.certificate-card.reverse-layout {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
+
+    /* Move preview image above content on small screens */
+    .reverse-layout .featured-preview {
+        order: -1;
+    }
+
+    .title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 }
